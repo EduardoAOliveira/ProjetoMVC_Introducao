@@ -19,13 +19,13 @@ namespace ProjetoMVC_Introducao.Controllers
                 Tipo = "Administrador"
             };
 
-            ViewData["PessoaId"] = pessoa.PessoaId;
-            ViewData["Nome"] = pessoa.Nome;
-            ViewData["Tipo"] = pessoa.Tipo;
+            //ViewData["PessoaId"] = pessoa.PessoaId;
+            //ViewData["Nome"] = pessoa.Nome;
+            //ViewData["Tipo"] = pessoa.Tipo;
 
-            ViewBag.Id = pessoa.PessoaId;
-            ViewBag.Nome = pessoa.Nome;
-            ViewBag.Tipo = pessoa.Tipo;
+            //ViewBag.Id = pessoa.PessoaId;
+            //ViewBag.Nome = pessoa.Nome;
+            //ViewBag.Tipo = pessoa.Tipo;
 
             return View(pessoa);
         }
@@ -43,13 +43,17 @@ namespace ProjetoMVC_Introducao.Controllers
         //    return View();
         //}
 
+        //public ActionResult Lista(Pessoa pessoa)
+        //{
+        //    ViewData["PessoaId"] = pessoa.PessoaId;
+        //    ViewData["Nome"] = pessoa.Nome;
+        //    ViewData["Tipo"] = pessoa.Tipo;
+
+        //    return View();
+        //}
         public ActionResult Lista(Pessoa pessoa)
         {
-            ViewData["PessoaId"] = pessoa.PessoaId;
-            ViewData["Nome"] = pessoa.Nome;
-            ViewData["Tipo"] = pessoa.Tipo;
-
-            return View();
+            return View(pessoa);
         }
     }
 }

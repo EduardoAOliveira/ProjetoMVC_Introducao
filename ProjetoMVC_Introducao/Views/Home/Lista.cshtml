@@ -1,4 +1,5 @@
-﻿
+﻿@model ProjetoMVC_Introducao.Models.Pessoa
+
 @{
     ViewBag.Title = "Lista";
 }
@@ -6,21 +7,21 @@
 <h2>Lista</h2>
 
 <div>
-    <b>Pessoa Id</b>
+    <b>@Html.LabelFor(x => x.PessoaId)</b>
 </div>
 <div>
-    <p>@ViewData["PessoaId"]</p>
+    <p>@Model.PessoaId</p>
 </div>
 <div>
-    <b>Nome</b>
+    <b>@Html.LabelFor(x => x.Nome)</b>
 </div>
 <div>
-    <p>@ViewData["Nome"]</p>
+    <p>@Model.Nome</p>
 </div>
 <div>
-    <b>Tipo</b>
+    <b>@Html.LabelFor(x => x.Tipo)</b>
 </div>
 <div>
-    <p>@ViewData["Tipo"]</p>
+    <p>@Model.Tipo</p>
 </div>
-<a href="~/">Voltar</a>
+@Html.ActionLink("Voltar", "Index", "Home");

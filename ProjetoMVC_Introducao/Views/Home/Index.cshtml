@@ -1,4 +1,5 @@
 ﻿@model ProjetoMVC_Introducao.Models.Pessoa
+@*@model ProjetoMVC_Introducao.Models.Usuario*@
 
 @{
     ViewBag.Title = "Index";
@@ -6,50 +7,53 @@
 
 <h2>Asp MVC</h2>
 <p>Eduardo de Almeida Oliveira</p>
+<br />
+<br />
+@*<p>Exemplo de ViewData</p>
+    <p>@ViewData["PessoaId"]</p>
+    <p>@ViewData["Nome"]</p>
+    <p>@ViewData["Tipo"]</p>
 
-<br />
-<br />
-<p>Exemplo de ViewData</p>
-<p>@ViewData["PessoaId"]</p>
-<p>@ViewData["Nome"]</p>
-<p>@ViewData["Tipo"]</p>
+    <br />
+    <br />
+    <p>Exemplo de ViewBag</p>
+    <p>@ViewBag.Id</p>
+    <p>@ViewBag.Nome</p>
+    <p>@ViewBag.Tipo</p>
 
-<br />
-<br />
-<p>Exemplo de ViewBag</p>
-<p>@ViewBag.Id</p>
-<p>@ViewBag.Nome</p>
-<p>@ViewBag.Tipo</p>
+    <br />
+    <br />
+    <p>Exemplo de View Tipado</p>
+    <p>@Model.PessoaId</p>
+    <p>@Model.Nome</p>
+    <p>@Model.Tipo</p>*@
 
-<br />
-<br />
-<p>Exemplo de View Tipado</p>
-<p>@Model.PessoaId</p>
-<p>@Model.Nome</p>
-<p>@Model.Tipo</p>
-
-<form action="Home/Lista" method="post">
+@using (Html.BeginForm("Lista", "Home", FormMethod.Post))
+{
     <fieldset>
         <legend>Informações de Pessoas</legend>
 
         <div>
-            <label for="PessoaId">Código</label>
+            @Html.LabelFor(x => x.PessoaId)
         </div>
         <div>
-            <input type="number" value="@Model.PessoaId" name="PessoaId" />
+            @*<input type="number" value="@Model.PessoaId" name="PessoaId" />*@
+            @Html.EditorFor(x => x.PessoaId)
         </div>
         <div>
-            <label for="PessoaId">Nome</label>
+            @Html.LabelFor(x => x.Nome)
         </div>
         <div>
-            <input type="text" value="@Model.Nome" name="Nome" />
+            @*<input type="text" value="@Model.Nome" name="Nome" />*@
+            @Html.EditorFor(x => x.Nome)
         </div>
         <div>
-            <label for="PessoaId">Tipo</label>
+            @Html.LabelFor(x => x.Tipo)
         </div>
         <div>
-            <input type="text" value="@Model.Tipo" name="Tipo" />
+            @*<input type="text" value="@Model.Tipo" name="Tipo" />*@
+            @Html.EditorFor(x => x.Tipo)
         </div>
         <input type="submit" value="Enviar" />
     </fieldset>
-</form>
+}
