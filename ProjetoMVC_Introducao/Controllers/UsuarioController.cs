@@ -1,8 +1,6 @@
 ﻿using ProjetoMVC_Introducao.Models;
-using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace ProjetoMVC_Introducao.Controllers
@@ -32,6 +30,16 @@ namespace ProjetoMVC_Introducao.Controllers
         public ActionResult Resultado(Usuario usuario)
         {
             return View(usuario);
+        }
+        public ActionResult LoginUnico(string login)
+        {
+            var bdExemplo = new Collection<string>()
+            {
+                "Hugo",
+                "Freitas",
+                "Paula"
+            };
+            return Json(bdExemplo.All(x => x.ToLower() != login.ToLower()), JsonRequestBehavior.AllowGet);
         }
     }
 }

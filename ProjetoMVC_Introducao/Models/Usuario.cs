@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace ProjetoMVC_Introducao.Models
 {
@@ -20,11 +17,11 @@ namespace ProjetoMVC_Introducao.Models
         public string Email { get; set; }
         [RegularExpression(@"[a-zA-Z]{5,15}", ErrorMessage ="Somente letras e de 5 a 15 caracteres.")]
         [Required(ErrorMessage = "O login é obrigatório")]
+        [Remote("LoginUnico","Usuario", ErrorMessage = "Este login já existe.")]
         public string Login { get; set; }
         [Required(ErrorMessage = "O senha é obrigatório")]
         public string Senha { get; set; }
-        [Compare("Senha", ErrorMessage = "As senhas não são iguais.")]
+        [System.ComponentModel.DataAnnotations.Compare("Senha", ErrorMessage = "As senhas não são iguais.")]
         public string ConfirmaçãoSenha { get; set; }
-
     }
 }
