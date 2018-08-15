@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoMVC_Introducao", "ProjetoMVC_Introducao\ProjetoMVC_Introducao.csproj", "{C5CEEE05-6DE1-4AB0-AF21-2A3135C22ACD}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bundle", "Bundle\Bundle.csproj", "{ACAE45F7-37D8-485F-93A7-5D79460F8761}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenderLayout", "RenderLayout\RenderLayout.csproj", "{D1DFDB94-B420-4F8A-BEEE-E556A05267D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Area", "Area\Area.csproj", "{E4B61D80-5787-4027-AC50-2C04219D6A25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D1DFDB94-B420-4F8A-BEEE-E556A05267D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1DFDB94-B420-4F8A-BEEE-E556A05267D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1DFDB94-B420-4F8A-BEEE-E556A05267D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4B61D80-5787-4027-AC50-2C04219D6A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B61D80-5787-4027-AC50-2C04219D6A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4B61D80-5787-4027-AC50-2C04219D6A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4B61D80-5787-4027-AC50-2C04219D6A25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
